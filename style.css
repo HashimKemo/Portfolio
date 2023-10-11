@@ -1,0 +1,127 @@
+:root {
+    --mainColor: #9fd8cb;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Corbel,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    height: 90svh;
+    font-size: 1.3rem;
+}
+
+/* navbar */
+.banner {
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    -webkit-box-shadow: 0px 14px 20px 0px rgba(0,0,0,0.125); 
+    box-shadow: 0px 14px 20px 0px rgba(0,0,0,0.125);
+}
+
+@media (max-width: 500px) {
+    .banner {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 0;
+        margin: 5% 0;
+    }
+    .logo {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    .banner ul {
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 0;
+        margin: 5%;
+    }
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .logo .logoText {
+        border-bottom: 3px solid var(--mainColor);
+    }
+}
+
+.logo .logoText {
+    text-align: center;
+    border-bottom: 3px solid var(--mainColor);
+    width: 35px;
+    margin: 0 10%;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.banner ul li::after {
+    content: ' ';
+    height: 3px;
+    width: 100%;
+    background: var(--mainColor);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+  }
+  .banner ul li:hover::after {
+    transform: scaleX(1);
+}
+
+.nav li {
+    list-style: none;
+    position: relative;
+    margin: 0 5%;
+
+}
+
+.nav li a, .logo a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+/* navbar */
+
+/* main */
+.main {
+    margin-top: 10%;
+    display: block;
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.photo img {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 14px 20px 0px rgba(0,0,0,0.125); 
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.125);
+}
+
