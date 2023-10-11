@@ -182,3 +182,9 @@ ul {
     align-self: flex-end;
     width: 3rem;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
